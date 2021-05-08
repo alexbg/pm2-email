@@ -4,8 +4,10 @@
   "description": "check bus process and send an email when there is an error",
   "main": "pm2-email.js",
   "scripts": {
-    "start": "pm2 start ./pm2-email.js --name pm2-email",
-    "stop": "pm2 stop pm2-email"
+    "start": "pm2 start pm2-email.service.config.js",
+    "stop": "pm2 stop pm2-email.service.config.js",
+    "delete": "pm2 delete pm2-email.service.config.js",
+    "ps": "pm2 list"
   },
   "keywords": [
     "pm2"

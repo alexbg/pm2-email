@@ -13,8 +13,8 @@ pm2.launchBus(function(err, bus) {
           path: '/usr/sbin/sendmail'
         });
         transporter.sendMail({
-            from: '',
-            to: '',
+            from: process.env.PM2EMAILFROM,
+            to: process.env.PM2EMAILTO,
             subject: subject,
             text: message
         }, (err, info) => {
